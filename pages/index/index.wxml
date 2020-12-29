@@ -1,0 +1,65 @@
+<view class="indexContainer">
+
+  <!-- 轮播图 -->
+  <swiper class="indexSwiper" indicator-dots indicator-color="ivory" indicator-active-color="#d43c33" autoplay>
+    <swiper-item class="swiperItem" wx:for="{{banners}}" wx:key="id">
+      <image src="{{item.pic}}"></image>
+    </swiper-item>
+  </swiper>
+
+  <!-- 每日推荐 -->
+  <view class="navContainer">
+    <view class="navItem" bindtap="toRecommendSong">
+      <text class="iconfont icon-meirituijian-"></text>
+      <text class="navItemText">每日推荐</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-gedan1"></text>
+      <text class="navItemText">歌单</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-icon-ranking"></text>
+      <text class="navItemText">排行榜</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-diantai"></text>
+      <text class="navItemText">电台</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-zhiboguankanliangbofangsheyingshexiangjixianxing"></text>
+      <text class="navItemText">直播</text>
+    </view>
+  </view>
+
+  <!-- 推荐歌曲，滑动图片 -->
+  <view class="recommendContainer">
+    <!-- 推荐歌曲标题top -->
+    <NavHeader moreTitle="推荐歌曲" recommendTitle="为你精心推荐" />
+    <!-- 滑动图片 -->
+    <scroll-view class="SlidePicture" scroll-x enable-flex>
+      <view class="SlidePictureItem" wx:for="{{recommendList}}" wx:key="id">
+        <image src="{{item.picUrl}}" class="picture"></image>
+        <text class="prctureContent">{{item.name}}</text>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!--  -->
+  <view class="rankContainer">
+    <NavHeader moreTitle="排行榜" recommendTitle="热歌风向标" />
+    <swiper next-margin="50rpx" class="topSwiper">
+      <swiper-item wx:for="{{topList}}" wx:key="id">
+        <view class="rankTitle">{{item.name}} ></view>
+        <view class="rankList">
+          <view class="rankItem" wx:for="{{item.list}}" wx:for-item="rankItem" wx:for-index="rankIndex" wx:key="id">
+            <image src="{{rankItem.al.picUrl}}" class="rankImg"></image>
+            <text class="rankIndex">{{rankIndex}}</text>
+            <text class="rankContent">{{rankItem.name}}</text>
+          </view>
+        </view>
+      </swiper-item>
+
+    </swiper>
+  </view>
+
+</view>

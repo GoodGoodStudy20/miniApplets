@@ -1,0 +1,134 @@
+.videoContainer{
+  margin: 0 20rpx;
+}
+.videoContainer .videoSearch{
+  display: flex;
+  justify-content: space-between;
+  margin-top:20rpx;
+}
+.videoContainer .videoSearch image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.videoContainer .videoSearch .videoInput{
+  height: 60rpx;
+  border: 1px solid #ccc;
+  flex-grow: 1;
+  margin: 0 20rpx;
+  border-radius: 10rpx;
+  padding-left: 10rpx;
+}
+.videoContainer .videoSearch .videoInput .videoInputContent{
+  font-size: 32rpx;
+  color: red;
+  text-align: center;
+}
+
+/* 视频滚动条区域 */
+.videoContainer .navScroll{
+  display: flex;
+}
+.videoContainer .navScroll .navItem{
+  white-space: nowrap;
+  height: 96rpx;
+  line-height: 96rpx;
+  text-align: center;
+  margin: 0 20rpx;
+}
+.videoContainer .navScroll .navItem.active{
+  border-bottom: 6rpx solid red;
+}
+.videoList .common {
+  width: 100%;
+  border-radius: 10rpx;
+}
+
+.videoList .videoItem{
+  padding:3%;
+  padding-bottom:0;
+}
+
+
+.videoList{
+  padding-top:40rpx;
+  /*
+    scroll-view的高度=屏幕100% - header高度 - navScroll高度
+  */
+  height:calc(100vh - 72rpx - 98rpx - 40rpx);
+}
+
+.videoList .content {
+  font-size: 26rpx;
+  height:80rpx;
+  line-height: 80rpx;
+  max-width: 500rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* footer */
+.footer {
+  border-top: 1rpx solid #eee;
+  padding: 20rpx 0;
+}
+.footer .avatar {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.footer  .nickName {
+  font-size: 26rpx;
+  vertical-align: middle;
+  margin-left: 20rpx;
+}
+
+.footer .comments_praised {
+  float: right;
+}
+.comments_praised .btn {
+  display: inline;
+  padding: 0;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.comments_praised .btn:after {
+  border: none;
+}
+
+.comments_praised .item {
+  margin-left: 50rpx;
+  position: relative;
+}
+
+.comments_praised .item .count {
+  position: absolute;
+  top: -20rpx;
+  font-size: 20rpx;
+}
+
+.videoContainer .header .search .placeholder{
+  text-align: center;
+  color:red;
+  font-size:28rpx;
+}
+
+.videoContainer .navScroll{
+  display:flex;
+  height:98rpx;
+}
+
+.videoContainer .navScroll .navItem{
+  white-space: nowrap;
+  height:96rpx;
+  line-height:96rpx;
+  text-align: center;
+  margin:0 20rpx;
+}
+
+.videoContainer .navScroll .navItem.active{
+  border-bottom:1rpx solid red;
+}

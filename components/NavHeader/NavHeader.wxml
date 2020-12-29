@@ -1,0 +1,7 @@
+<view class="recommendTop">
+  <text class="recommendTitle" props="moreTitle">{{moreTitle}}</text>
+  <view class="recommendMore">
+    <text class="wellRecommend" props="recommendTitle">{{recommendTitle}}</text>
+    <view class="seeMore">查看更多</view>
+  </view>
+</view>
